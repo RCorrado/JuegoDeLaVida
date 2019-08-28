@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Raúl Corrado">
+		<title>Juego de la vida</title>
+		<!--CSS-->
+		<link rel="stylesheet" type="text/css" href="pigmalion.css">
+	</head>
+	<body>
+		<!--Instrucciones-->
+		<div id="instructions">
+			<h1>Instrucciones de uso</h1>
+			<ol>
+				<li>Poné la cantidad de filas que querés que tenga la matriz</li>
+				<li>Poné la cantidad de columnas que querés que tenga la matriz</li>
+				<li>Tocá el botón que dice "Generar"</li>
+				<li>Si querés una configuración predeterminada tocá el alguno de los botones debajo de los casilleros</li>
+				<li>Por defecto, el juego avanza automáticamente de generación cada un segundo, para pausar el comportamiento predeterminado, tocar la barra espaciadora o presionar sobre el botón "Pausa"</li>
+				<li>Para avanzar manualmente, tocar la tecla "->" (flecha derecha)</li>
+			</ol>
+		</div>
+		<!--Input-->
+		<div class="inputs-variable">
+			<div>
+				<label>Cantidad de filas</label>		
+				<input id="filas" type="number" name="filas" min="1" max="255" required>
+			</div>
+			<div>
+				<label>Cantidad de columas</label>
+				<input id="cols" type="number" name="columnas" min="1" max="255" required>
+			</div>
+			<div>
+				<label>Cantidad de células vivas</label>		
+				<input id="alive" type="text" name="celulasVivas" required>
+			</div>
+			<input id="generar" type="button" name="generar" value="Generar">
+		</div>
+		<div class="inputs-variable button-group">
+			<input id="generarBloque" type="button" name="block" value="Block">
+			<input id="generarBlinker" type="button" name="blinker" value="Blinker">
+			<input id="generarToad" type="button" name="toad" value="Toad">
+		</div>
+		<!--Output-->
+		<div class="matriz-container">
+			<div id="matriz"></div>
+			<div id="gen"><p>Generación:<span></span></p></div>
+			<div class="button-group">
+				<input id="pausa" type="button" name="pausa" value="Empezar" disabled="true">
+				<input id="finalizar" type="button" name="finalizar" value="Finalizar" disabled="true">
+				<input id="salir" type="button" name="salir" value="Salir">
+			</div>
+		</div>
+	</body>
+	<!--JS-->
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="pigmalion.js"></script>
+</html>
