@@ -1,0 +1,29 @@
+{
+  "name": "pigmalion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pigmalion.js",
+  "scripts": {
+    "babel": "babel --presets es2015 content/pigmalion.js -o build/main.bundle.js",
+    "webpack": "webpack",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RCorrado/JuegoDeLaVida.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RCorrado/JuegoDeLaVida/issues"
+  },
+  "homepage": "https://github.com/RCorrado/JuegoDeLaVida#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
+  }
+}
