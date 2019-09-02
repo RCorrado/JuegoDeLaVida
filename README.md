@@ -21,4 +21,4 @@ Tené en cuenta, también, que se empieza a contar desde el cero, es decir que e
 
 ###### **Si querés una configuración predeterminada tocá el alguno de los botones debajo de los casilleros.**
 ###### **Por defecto, el juego avanza automáticamente de generación cada un segundo, para pausar el comportamiento predeterminado, tocar la barra espaciadora o presionar sobre el botón "Pausa".**
-###### **Para avanzar manualmente, tocar la tecla "->" (flecha derecha).**
+###### **Para avanzar manualmente, tocar la tecla :arrow_right: (flecha derecha).**
