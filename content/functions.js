@@ -17,20 +17,17 @@ function pausar(estado, juego, interval){
 			$('#pausa').attr("value", "Pausar");
 			deshabilitar(elems);
 			return interval;
-			break;
 		case "Pausar":
 			habilitar(elems);
 			clearInterval(interval);
 			$('#pausa').attr("value", "Reanudar");
 			return interval;
-			break;
 		case "Reanudar":
 			deshabilitar(elems);
 			juego.devolverMatriz();
 			interval = startInterval(juego);
 			$('#pausa').attr("value", "Pausar");
 			return interval;
-			break;
 	}
 }
 
