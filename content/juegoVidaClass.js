@@ -16,12 +16,12 @@ class JuegoVida{
 	}
 
 	armarMatriz(array){
-		for(let k=0; k<array.length; k++){
+		array.forEach(elem => {
 			//Reemplazamos los espacios blancos por células vivas en donde lo requiera el usuario
-			let pX = parseInt(array[k].substr(0,1));
-			let pY = parseInt(array[k].substr(-1,1));
+			let pX = parseInt(elem.substr(0,1));
+			let pY = parseInt(elem.substr(-1,1));
 			this.f[pX][pY].setEstado("*");
-		}
+		});
 	}
 
 	devolverMatriz(){
@@ -109,12 +109,13 @@ class JuegoVida{
 						vecinos.push(this.f[i+1][j+1].str);
 					}
 				}
-				for(let k=0;k<vecinos.length;k++){
-					//contador para evaluar la cantidad de células vivas alrededor
-					if(vecinos[k] == "*"){
+				//for(let k=0;k<vecinos.length;k++){
+				//contador para evaluar la cantidad de células vivas alrededor
+				vecinos.forEach(vecino => {
+					if(vecino == "*"){
 						cont++;
 					}
-				}
+				});
 				//cambiamos el estado de las células si lo requiere
 				if(cont==2 && actual == "*"){
 					matrizAct[i][j] = "*";

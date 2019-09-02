@@ -29,13 +29,13 @@ $(document).ready(function(){
 		columnas = $('#cols').val();
 		posVivas = $('#alive').val().split(";");
 		let elems = document.querySelectorAll('input[type="text"]');
-		for(let i = 0; i < elems.length; i++){
-			deshabilitar(elems[i]);
-		}
+		elems.forEach(elem => {
+			deshabilitar(elem);
+		});
 		elems = document.querySelectorAll('input[type="number"]');
-		for(let i = 0; i < elems.length; i++){
-			deshabilitar(elems[i]);
-		}
+		elems.forEach(elem => {
+			deshabilitar(elem);
+		});
 		elems = document.getElementById('pausa');
 		habilitar(elems);
 		let jv = new JuegoVida(parseInt(filas),parseInt(columnas),0);
@@ -128,7 +128,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		filas = 10;
 		columnas = 10;
-		posVivas = "4,5;4,6;4,7;4,8;5,4;5,5;5,6;5,7";
+		posVivas = "4,5;4,6;4,7;5,4;5,5;5,6";
 		posVivas = posVivas.split(";");
 		let elem = document.querySelectorAll('.inputs-variable input');
 		deshabilitar(elem);
